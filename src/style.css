@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.width {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 92%;
+}
+
+.header {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.search-input {
+    border: 1px solid #ddd;
+    padding: 0 24px;
+    border-radius: 8px;
+    line-height: 54px;
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+h1 a {
+    color: white;
+    cursor: pointer;
+}
+
+.home-search {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.home-cryptos {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.home-crypto a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.home-crypto-left {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+span {
+    display: block;
+}
+
+.home-crypto-image {
+    width: 50px;
+}
+
+.home-crypto-name {
+    flex: 1;
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+}
+
+.home-crypto-prices {
+    color: #111;
+}
+
+.crypto-price-usd {
+    font-size: 10px;
+    color:#666;
+}
+
+.crypto-price-btc {
+    font-size: 16px;
+}
+
+.home-crypto-prices img {
+    width: 16px;
+    display: inline-block;
+    margin: -3px 5px 0 0;
+    vertical-align: middle;
+}
