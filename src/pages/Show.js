@@ -7,10 +7,10 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 export default function Show() {
 
   const coinName = useParams();
-  const { fetchSearchedCoin, graphData, setQuery, setSelectedCoin } = useContext(CoinsContext);
+  const { fetchSelectedCoin, graphData, } = useContext(CoinsContext);
 
   useEffect(() => {
-    fetchSearchedCoin(coinName.id);
+    fetchSelectedCoin(coinName.id);
   }, [])
 
 

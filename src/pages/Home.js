@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { CoinsContext } from '../context/coinsContext'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header/Header';
+import debounce from '../helpers/debounce';
 
 export default function Home() {
 
-  const { fetchCoins, coins, query, setQuery } = useContext(CoinsContext);
+  const { fetchCoins, coins, query, setQuery} = useContext(CoinsContext);
 
   useEffect(() => {
     fetchCoins();
@@ -32,10 +33,10 @@ export default function Home() {
                   </span>
                   <span className='home-crypto-name'>{coin.name}</span>
                 </div>
-                <span className='home-crypto-prices'>
+                {/* <span className='home-crypto-prices'>
                   <span className='crypto-price-btc'> <img src="/bitcoin.webp" />{coin.priceBtc.toFixed(10)} BTC</span>
                   <span className='crypto-price-usd'> ({coin.priceUsd.toFixed(10)} USD)</span>
-                </span>
+                </span> */}
               </Link>
             </div>
           ))}
