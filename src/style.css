@@ -102,7 +102,7 @@ span {
 
 .crypto-price-usd {
     font-size: 10px;
-    color:#666;
+    color: #666;
 }
 
 .crypto-price-btc {
@@ -116,3 +116,48 @@ span {
     vertical-align: middle;
 }
 
+.show-header {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.show-header img {
+    width: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.show-header h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.show-graph {
+    height: 200px;
+    width: 100%;
+}
+
+.show-details {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.show-details h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.show-details-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    color:#666;
+}
+
+.show-details-row h4 {
+    font-size: 16px;
+    color: #111;
+}

@@ -44,7 +44,7 @@ const CoinsProvider = ({ children }) => {
         ])
 
         const btcPrice = btcRes.data.bitcoin.usd;
-
+        
         const coins = resp.data.coins.map((coin) => {
             return {
                 name: coin.item.name,

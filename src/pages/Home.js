@@ -9,8 +9,10 @@ export default function Home() {
 
   useEffect(() => {
     fetchCoins();
-  }, [])
+  }, []);
 
+  if (coins.length <= 0) return <></>;
+  
   return (
     <div>
       <Header></Header>
@@ -22,7 +24,7 @@ export default function Home() {
       </header>
       <div className='home-cryptos'>
         <div className='width'>
-          <h2>Trending coins</h2>
+          <h2>{coins[0].priceBtc ? "Trending coins" : "Search results"}</h2>
           {coins.map((coin) => (
             <div className="home-crypto " key={coin.id}>
               <Link to={`/${coin.id}`}>
