@@ -8,13 +8,11 @@ const CoinsProvider = ({ children }) => {
     const [coins, setCoins] = useState([]);
     const [trendingCoins, setTrendingCoins] = useState([]);
     const [query, setQuery] = useState("");
-    const [graphData, setGraphData] = useState();
 
 
     useEffect(() => {
 
         if (query.length > 2) {
-            console.log("if")
             const getData = setTimeout(() => {
                 axios
                     .get(`https://api.coingecko.com/api/v3/search?query=${query}`)
@@ -60,24 +58,8 @@ const CoinsProvider = ({ children }) => {
         setTrendingCoins(coins);
     }
 
-    const fetchSelectedCoin = async (coinName) => {
 
-        const res = await axios.get(`https://api.coingecko.com/api/v3/coins/${coinName}/market_chart?vs_currency=usd&days=121`)
-
-        const graphData = res.data.prices.map((price) => {
-
-            const [timestamp, priceUsd] = price;
-            const date = new Date(timestamp).toLocaleDateString("en-gb");
-
-            return {
-                Date: date,
-                Price: priceUsd
-            }
-        })
-        setGraphData(graphData)
-    }
-
-    const value = { fetchCoins, coins, fetchSelectedCoin, graphData, setQuery };
+    const value = { fetchCoins, coins, setQuery };
     return <CoinsContext.Provider value={value}>{children}</CoinsContext.Provider>
 }
 
